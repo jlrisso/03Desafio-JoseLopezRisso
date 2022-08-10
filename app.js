@@ -82,13 +82,16 @@ function checkMyLuck() { //POSIBILIDAD DE QUE EL USUARIO OBTENGA UN DESCUENTO (Q
 function renderElements(booksArray) {
   const mySection = document.querySelector('.intro');
   const template = document.querySelector('template');
-  const myCard = template.content.querySelector('.product-card')
-
+  const myCard = template.content.querySelector('.card');
+  
+ 
+  
   booksArray.forEach((element) => {
     const cardCopy = myCard.cloneNode(true);
-    cardCopy.children[0].innerText = element.title;
-    cardCopy.children[1].innerText = element.author;
-    cardCopy.children[2].innerText = element.price;
+    const subCardCopy = cardCopy.querySelector('.product-card');
+    subCardCopy.children[0].innerText = element.title;
+    subCardCopy.children[1].innerText = element.author;
+    subCardCopy.children[2].innerText = element.price;
     mySection.append(cardCopy);
   });
 }
@@ -116,3 +119,6 @@ function applyADiscount(objectArray, discountPercentage, idList = []) {
     }
   });
 };
+
+
+

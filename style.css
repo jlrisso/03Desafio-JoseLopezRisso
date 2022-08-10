@@ -1,28 +1,8 @@
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-img {
-    max-width: 100%;
-}
-
-h1 {
-    margin-top: 0;
-}
-
-.intro{
-    color:black;
-    padding: 2em 0;
-}
-
-.flex {
+.intro {
     display: flex;
-    justify-content: space-around;
 }
 
+.card {
+    flex-basis: 100%;
+    text-align: center;
+}
